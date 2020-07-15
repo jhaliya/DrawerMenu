@@ -172,6 +172,13 @@ public class DrawerMenu: UIViewController, UIGestureRecognizerDelegate {
         }
     }
 
+    public override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            setupViews()
+        }
+    }
+    
     // MAKR: Private
     private func setupViews() {
 
